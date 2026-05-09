@@ -12,6 +12,8 @@
 
 ✅ 本地 JSON 持久化存储，重启不丢失数据
 
+✅ 一键清空全部待办
+
 ## 项目结构
 ```
 ├── src/            # TypeScript 源码目录
@@ -40,6 +42,9 @@ node dist/index.js done 任务ID
 
 # 删除待办
 node dist/index.js del 任务ID
+
+# 清空所有待办
+node dist/index.js clear
 ```
 ## 一键推送到 GitHub
 
