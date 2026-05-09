@@ -40,6 +40,18 @@ function finishTodo(id: number) {
   showTodos();
 }
 
+// 新增：删除待办
+function deleteTodo(id: number) {
+  const beforeLen = todoList.length;
+  todoList = todoList.filter(item => item.id !== id);
+  if (todoList.length < beforeLen) {
+    console.log("删除成功！");
+  } else {
+    console.log("找不到该待办ID");
+  }
+  showTodos();
+}
+
 function run() {
   const args = process.argv.slice(2);
   const cmd = args[0];
@@ -53,14 +65,19 @@ function run() {
       const todoId = parseInt(args[1]);
       finishTodo(todoId);
       break;
+    case "del":
+      const delId = parseInt(args[1]);
+      deleteTodo(delId);
+      break;
     case "list":
       showTodos();
       break;
     default:
       console.log("可用命令：");
       console.log("  node dist/index.js add 待办内容");
-      console.log("  node dist/index.js list");
       console.log("  node dist/index.js done 待办ID");
+      console.log("  node dist/index.js del 待办ID");
+      console.log("  node dist/index.js list");
   }
 }
 
