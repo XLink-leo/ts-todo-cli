@@ -44,6 +44,6 @@ chmod +x push.sh
 Windows
 双击 `push.bat` 即可自动提交并推送。
 数据持久化
-所有数据保存在 todos.json 文件中，删除即可清空数据。
+所有数据保存在 `todos.json` 文件中，删除即可清空数据。
 
 Enjoy it!
