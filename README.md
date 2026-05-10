@@ -46,19 +46,6 @@ node dist/index.js del 任务ID
 # 清空所有待办
 node dist/index.js clear
 ```
-## 一键推送到 GitHub
-
-Linux / Mac
-
-```bash
-chmod +x push.sh
-./push.sh "更新内容"
-```
-
-Windows
-
-双击 `push.bat` 即可自动提交并推送。
-
 ## 数据持久化
 所有数据保存在 `todos.json` 文件中，删除即可清空数据。
 
